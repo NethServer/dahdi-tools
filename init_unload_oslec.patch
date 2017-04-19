@@ -1,0 +1,11 @@
+--- dahdi.init
++++ dahdi.init
+@@ -39,7 +39,7 @@ DAHDI_DEV_TIMEOUT=20
+ 
+ # A list of modules to unload when stopping.
+ # All of their dependencies will be unloaded as well.
+-DAHDI_UNLOAD_MODULES="dahdi"
++DAHDI_UNLOAD_MODULES="dahdi echo"
+ 
+ #
+ # Determine which kind of configuration we're using
