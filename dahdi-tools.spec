@@ -47,6 +47,23 @@ Requires: libtonezone = %{version}-%{release}
 %description -n libtonezone-devel
 The static libraries and header files needed for building additional plugins/modules
 
+%package        libs
+Summary:        Library files for DAHDI
+Group:          Development/Libraries
+Conflicts:      zaptel-lib
+
+%description    libs
+The dahdi-tools-libs package contains libraries for accessing DAHDI hardware.
+
+%package        devel
+Summary:        Development files for DAHDI
+Group:          Development/Libraries
+Requires:       dahdi-tools-libs%{?_isa} = %{version}-%{release}
+
+%description    devel
+The dahdi-devel package contains libraries and header files for
+developing applications that use DAHDI hardware.
+
 %prep
 %setup -n %{name}-%{version}
 %patch0
@@ -114,3 +131,14 @@ cd $RPM_BUILD_DIR
 %defattr(-, root, root)
 %{_includedir}/dahdi/tonezone.h
 %{_libdir}/libtonezone.a
+
+%files libs
+%defattr(-,root,root,-)
+%doc LICENSE LICENSE.LGPL
+%{_libdir}/*.so.*
+
+%files devel
+%defattr(-,root,root,-)
+%doc LICENSE LICENSE.LGPL
+%{_includedir}/*
+%{_libdir}/*.so
