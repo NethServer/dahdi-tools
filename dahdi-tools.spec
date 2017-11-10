@@ -142,3 +142,7 @@ cd $RPM_BUILD_DIR
 %doc LICENSE LICENSE.LGPL
 %{_includedir}/*
 %{_libdir}/*.so
+
+%changelog
+* Tue May 09 2017 Stefano Fancello <stefano.fancello@nethesis.it> - 2.11.1-1
+- First NethServer package
