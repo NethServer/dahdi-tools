@@ -1,7 +1,7 @@
 Summary: The DAHDI project
 Name: dahdi-tools
 Version: 2.11.1
-Release: 1%{dist}
+Release: 2%{dist}
 License: GPL
 Group: Utilities/System
 Source0: https://downloads.asterisk.org/pub/telephony/dahdi-tools/dahdi-tools-%{version}.tar.gz
@@ -136,13 +136,16 @@ cd $RPM_BUILD_DIR
 %defattr(-,root,root,-)
 %doc LICENSE LICENSE.LGPL
 %{_libdir}/*.so.*
+%{_libdir}/*.so
 
 %files devel
 %defattr(-,root,root,-)
 %doc LICENSE LICENSE.LGPL
 %{_includedir}/*
-%{_libdir}/*.so
 
 %changelog
+* Fri Nov 10 2017 Stefano Fancello <stefano.fancello@nethesis.it> - 2.11.1-2
+- Bump version
+
 * Tue May 09 2017 Stefano Fancello <stefano.fancello@nethesis.it> - 2.11.1-1
 - First NethServer package
