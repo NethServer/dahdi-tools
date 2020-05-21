@@ -222,7 +222,7 @@ install -D -p -m 0644 dahdi.service %{buildroot}%{_unitdir}/dahdi.service
 %{_libdir}/*.so
 
 %changelog
-* Wed May 21 2020 Stefano Fancello <stefano.fancello@nethesis.it> - 2.11.1-17
+* Thu May 21 2020 Stefano Fancello <stefano.fancello@nethesis.it> - 2.11.1-17
 - Add Obsoletes and Provides of libtonezone package - Bug NethServer/dev#6172
 
 * Mon May 04 2020 Jared K. Smith <jsmith@fedoraproject.org> - 2.11.1-16
