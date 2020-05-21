@@ -49,6 +49,8 @@ Requires(pre):   %{_sbindir}/useradd
 Requires(pre):   %{_sbindir}/groupadd
 
 Conflicts:       zaptel-utils
+Obsoletes:       libtonezone
+Provides:       libtonezone
 
 %description
 DAHDI stands for Digium Asterisk Hardware Device Interface. This
