@@ -3,7 +3,7 @@
 
 Name:           dahdi-tools
 Version:        %{tools_version}
-Release:        17%{?dist}
+Release:        18%{?dist}
 Summary:        Userspace tools to configure the DAHDI kernel modules
 
 License:        GPLv2 and LGPLv2
@@ -51,6 +51,7 @@ Requires(pre):   %{_sbindir}/groupadd
 Conflicts:       zaptel-utils
 Obsoletes:       libtonezone
 Provides:       libtonezone
+Provides:       libtonezone.so.2()(64bit)
 
 %description
 DAHDI stands for Digium Asterisk Hardware Device Interface. This
